@@ -1,31 +1,12 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div class="col">
+    <div class="col mt-5">
     <h2>Log in</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "Email" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :name %><br />
-        <%= f.text_field :name, autofocus: true, autocomplete: "Name" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :last_name %><br />
-        <%= f.text_field :last_name, autofocus: true, autocomplete: "Last name" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :address %><br />
-        <%= f.text_field :address, autocomplete: "Address" %>
-      </div>
-      <div class="field">
-        <%= f.label :age %><br />
-        <%= f.number_field :age, autofocus: true, autocomplete: "Age" %>
       </div>
 
       <div class="field">
