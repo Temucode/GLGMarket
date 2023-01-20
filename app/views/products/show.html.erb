@@ -1,3 +1,19 @@
-<h1>SHOW</h1>
-
-<%= @product.name  %>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col mt-5">
+      <div class="photo">
+        <img src="https://via.placeholder.com/200x300" alt="">
+        <img src="https://via.placeholder.com/200x300" alt="">
+        <img src="https://via.placeholder.com/200x300" alt="">
+      </div>
+      <div class="product-infos">
+        <h2><%= @product.name %></h2>
+        <p><%= @product.price %>€</p>
+      </div>
+      <div class="product-description">
+        <span><strong>Description</strong></span>
+        <p><%= @product.description %></p>
+      </div>
+    </div>
+  </div>
+</div>

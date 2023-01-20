@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :products
+
+  get "myproducts", to: "products#my_products"
 end
