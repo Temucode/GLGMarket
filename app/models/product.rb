@@ -3,6 +3,7 @@ class Product < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
+  validates :address, presence: true
   validates :price, numericality: { only_integer: true}
   validates :price, comparison: { greater_than: 0}
 end

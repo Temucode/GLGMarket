@@ -29,9 +29,10 @@
       <br>
     <!-- card -->
       <div class="flex">
-        <% @products.each do |product| %>
+        <% @products.order(created_at: :desc).each do |product| %>
           <div class="card-trip">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"/>
+            <%# <div id="carouselExampleFade" class="carousel slide carousel-fade">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img src="https://picsum.photos/seed/picsum/300/300" alt="...">
@@ -51,16 +52,16 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
-            </div>
+            </div> %>
             <div class="card-trip-infos">
               <div>
                 <%= link_to product_path(product) do %>
                   <h2><%= product.name %></h2>
                 <% end %>
-                <p class="text-truncate"><%= product.description %></p>
+                <p class="text-truncate"><%= truncate(product.description, :length => 30) %></p>
               </div>
               <h2 class="card-trip-pricing"><%= product.price %>€</h2>
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered rounded-circle" />
             </div>
           </div>
         <% end %>
