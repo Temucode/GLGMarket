@@ -37,6 +37,10 @@ class ProductsController < ApplicationController
     redirect_to products_path, status: :see_other
   end
 
+  def my_products
+    @my_product = current_user.products.all
+  end
+
   private
 
   def set_product

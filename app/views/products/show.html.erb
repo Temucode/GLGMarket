@@ -32,6 +32,9 @@
         <span><strong>Description</strong></span>
         <p><%= @product.description %></p>
       </div>
+      <div class="create">
+        <small class="text-muted" style="margin-left:auto"><%= "#{time_ago_in_words(@product.created_at)} ago"%></small>
+      </div>
       <button type="button" class="btn btn-primary btn-lg btn-block">
         <%= link_to "Edit", edit_product_path, class:"text-decoration-none text-white" %>
       </button>
