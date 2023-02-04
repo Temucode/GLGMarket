@@ -35,6 +35,7 @@ images_seed =[ "https://picsum.photos/200/300",
                           name: Faker::Name.name,
                           description: Faker::Lorem.sentences(number: 1),
                           address: Faker::Address.full_address,
+                          images: Faker::LoremFlickr.image,
                           price: Faker::Number.between(from: 1, to: 100),
                           user_id: user.id
                           )

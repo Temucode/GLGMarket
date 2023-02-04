@@ -3,6 +3,7 @@
     <%= f.input :name, label: 'Name', error: 'Title is mandatory, please specify one', input_html: { class: 'product-form-input', maxlength: 100} %>
     <%= f.input :description, label: 'Description', error: 'Content is mandatory !', input_html: { class: 'product-form-input'} %>
     <%= f.input :address, label: 'Address', error: 'Content is mandatory !', input_html: { class: 'product-form-input'} %>
+    <%= f.input :images, as: :file, input_html: { multiple: true, accept:"image/png, image/jpeg", class:'form-control' } %>
     <%= f.input :price, input_html: { class: 'product-form-input'} %>
     <%= f.button :submit, "Create a product", class: 'product-form-submit'%>
   </div>
